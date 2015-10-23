@@ -51,7 +51,7 @@ class FallbackExceptionHandler implements ExceptionHandler
      */
     private function constructError(Exception $e, $status)
     {
-        $error = ['code' => $status, 'title' => 'Internal Server Error'];
+        $error = ['code' => $status, 'title' => 'Internal server error'];
 
         if ($this->debug) {
             $error['detail'] = (string) $e;
