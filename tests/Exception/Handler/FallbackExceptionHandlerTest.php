@@ -21,5 +21,6 @@ class FallbackExceptionHandlerTest extends \PHPUnit_Framework_TestCase
 
         $this->assertInstanceOf(ResponseBag::class, $response);
         $this->assertEquals(500, $response->getStatus());
+        $this->assertEquals(['code' => 500, 'title' => 'Internal server error'], $response->getError());
     }
 }
